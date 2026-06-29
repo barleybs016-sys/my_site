@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фадеев Дмитрий | Визитка</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Аватар и имя -->
+            <img src="/static/my_photo.jpg" alt="Фото Дмитрия" class="avatar">
+            <h1>Фадеев Дмитрий</h1>
+            <p class="title">СисАдмин & WipeCoder</p>
+
+            <!-- Краткое описание -->
+            <p class="desc">
+                🖥️ Системный администратор<br>
+                💻 WipeCoder (чистый код без лишнего)<br>
+                🚀 Люблю порядок в системе и коде
+            </p>
+
+            <!-- Социальные сети -->
+            <div class="socials">
+                <a href="https://web.telegram.org/a/" target="_blank">📱 Telegram</a>
+                <a href="https://vk.com/id528743470" target="_blank">📘 ВКонтакте</a>
+            </div>
+
+            <!-- Подробная информация (скроллится) -->
+            <div class="about-scroll">
+                <div class="about-content">
+                    <h2>👨‍💻 Обо мне</h2>
+
+                    <div class="info-block">
+                        <span class="label">📅 Дата рождения:</span>
+                        <span class="value">06.07.2007 (18 лет)</span>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="label">📍 Место рождения:</span>
+                        <span class="value">Мишкино, Курганская область</span>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="label">💼 Кто я:</span>
+                        <span class="value">Системный администратор, WipeCoder</span>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="label">⚡ Что делаю:</span>
+                        <span class="value">
+                            Настраиваю серверы, пишу чистый код,<br>
+                            автоматизирую рутину, люблю порядок
+                        </span>
+                    </div>
+
+                    <div class="info-block full-width">
+                        <span class="label">📝 Подробнее:</span>
+                        <span class="value">
+                            Родился в небольшом посёлке Мишкино в Курганской области.
+                            С детства увлекался компьютерами, со временем ушёл в
+                            системное администрирование и разработку.
+                            Сейчас занимаюсь настройкой инфраструктуры и пишу код,
+                            который работает без багов.
+                            В работе ценю минимализм и эффективность.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QR-код -->
+            <div class="qr-section">
+                <p>📲 Отсканируй QR-код, чтобы открыть сайт</p>
+                <img src="/static/qr.png" alt="QR-код" class="qr">
+            </div>
+
+            <!-- Кнопка "Наверх" -->
+            <button onclick="scrollToTop()" class="scroll-top" id="scrollBtn">⬆ Наверх</button>
+        </div>
+    </div>
+
+    <script>
+        // Показывать кнопку "Наверх" при прокрутке
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollBtn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+
+        // Функция прокрутки наверх
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
